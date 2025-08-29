@@ -7,6 +7,8 @@ import { Home } from './home/home';
 import { Cabecalho } from './componentes/cabecalho/cabecalho';
 import { Rodape } from './componentes/rodape/rodape';
 import { CriarPensamento } from './componentes/pensamentos/criar-pensamento/criar-pensamento';
+import { FormsModule } from '@angular/forms';
+import { ListarPensamento } from './componentes/pensamentos/listar-pensamento/listar-pensamento';
 
 @NgModule({
   declarations: [
@@ -14,11 +16,13 @@ import { CriarPensamento } from './componentes/pensamentos/criar-pensamento/cria
     Home,
     Cabecalho,
     Rodape,
-    CriarPensamento
+    CriarPensamento,
+    ListarPensamento
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [
     provideBrowserGlobalErrorListeners(),
