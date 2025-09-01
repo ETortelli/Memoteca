@@ -1,0 +1,22 @@
+{
+    "pensamentos": [
+        {
+            "id": 1,
+            "conteudo": "Que bom que você veio",
+            "autoria": "Ralph Waldo Emerson",
+            "modelo": "modelo1"
+        },
+        {
+            "id": 2,
+            "conteudo": "O único modo de fazer um excelente trabalho é amar o que você faz.",
+            "autoria": "Steve Jobs",
+            "modelo": "modelo2"
+        },
+        {
+            "id": 3,
+            "conteudo": "A felicidade não é algo pronto. Ela vem de suas próprias ações.",
+            "autoria": "Dalai Lama",
+            "modelo": "modelo3"
+        }
+    ]
+}
