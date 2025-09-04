@@ -10,6 +10,7 @@ import { CriarPensamento } from './componentes/pensamentos/criar-pensamento/cria
 import { FormsModule } from '@angular/forms';
 import { ListarPensamento } from './componentes/pensamentos/listar-pensamento/listar-pensamento';
 import { Pensamento } from './componentes/pensamentos/pensamento/pensamento';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { Pensamento } from './componentes/pensamentos/pensamento/pensamento';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule,
   ],
   providers: [
     provideBrowserGlobalErrorListeners(),
