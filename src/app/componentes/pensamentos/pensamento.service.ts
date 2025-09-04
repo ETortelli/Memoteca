@@ -21,11 +21,15 @@ export class PensamentoService {
     return this.http.post<PensamentoModel>(this.API, pensamento);
   }
 
-  // atualizar(pensamento: PensamentoModel): Observable<PensamentoModel> {
-  //   return this.http.put<PensamentoModel>(`${this.API}/${pensamento.id}`, pensamento);
-  // }
+  excluir(id: number): Observable<PensamentoModel> {
+    return this.http.delete<PensamentoModel>(`${this.API}/${id}`);
+  }
 
-  // remover(id: number): Observable<void> {
-  //   return this.http.delete<void>(`${this.API}/${id}`);
-  // }
+  buscarPorId(id: number): Observable<PensamentoModel> {
+    return this.http.get<PensamentoModel>(`${this.API}/${id}`);
+  }
+
+  editar(pensamento: PensamentoModel): Observable<PensamentoModel> {
+    return this.http.put<PensamentoModel>(`${this.API}/${pensamento.id}`, pensamento);
+  }
 }
