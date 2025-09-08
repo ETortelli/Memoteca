@@ -12,7 +12,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 })
 export class CriarPensamento implements OnInit {
 
-  formulario!: FormGroup
+  formulario!: FormGroup;
 
   constructor(
     private servicePensamento: PensamentoService,
@@ -48,6 +48,14 @@ export class CriarPensamento implements OnInit {
 
   cancelar() {
     this.router.navigate(['/listarPensamento']);
+  }
+
+  habilitarBotao(): string {
+    if (this.formulario.valid) {
+      return 'botao';
+    } else {
+      return 'botao__desabilitado';
+    }
   }
 
 }
