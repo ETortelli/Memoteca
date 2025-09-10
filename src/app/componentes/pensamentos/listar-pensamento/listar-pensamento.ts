@@ -1,4 +1,4 @@
-import { Component, OnInit, ChangeDetectorRef, signal } from '@angular/core';
+import { Component, OnInit, signal } from '@angular/core';
 import { PensamentoModel } from '../pensamento.model';
 import { PensamentoService } from '../pensamento.service';
 
@@ -11,17 +11,22 @@ import { PensamentoService } from '../pensamento.service';
 export class ListarPensamento implements OnInit{
   listaPensamentos = signal<PensamentoModel[]>([]);
   // listaPensamentos: PensamentoModel[] = [];
+  paginaAtual: number = 1;
 
   constructor(
     private pensamentoService: PensamentoService,
-    private cdr: ChangeDetectorRef
   ) { }
 
   ngOnInit(): void {
-    this.pensamentoService.listar().subscribe((listaPensamentos) => {
+    this.pensamentoService.listar(this.paginaAtual).subscribe((listaPensamentos) => {
       this.listaPensamentos.set(listaPensamentos); // Atualiza o signal
       // this.listaPensamentos = listaPensamentos;
     });
+
+    
+      // this.pensamentoService.listar(this.paginaAtual).subscribe((listaPensamentos) => {
+        // this.listaPensamentos = listaPensamentos;
+      // });
   }
 
 }
